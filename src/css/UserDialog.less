@@ -1,0 +1,198 @@
+.UserDialog-Wrapper {
+  /*全屏*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /*内容居中*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(240, 239, 233, 1);
+}
+
+@keyframes show {
+  0% {
+  }
+  100% {
+    transform: scale(0.1)
+  }
+}
+
+.hidePanel {
+  animation: show 0.7s;
+}
+
+.UserDialog {
+  border-radius: 4px;
+  min-width: 20em;
+  background: #fafff4;
+  border: 1px solid #aaa;
+  box-shadow: 0 0 1em hsla(0, 0%, 0%, 0.52);
+  .signInOrSignUp {
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+  }
+  input {
+    border-width: 1px;
+  }
+  nav {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.5em;
+    position: relative;
+    input {
+      display: none;
+    }
+   .checked {
+      color: red;
+      font-weight: bold;
+    }
+    .inkBar {
+      position: absolute;
+      bottom: 0;
+      width: 2.8em;
+      background: orange;
+      height: 2px;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      transform: translate3d(3.5em, 0, 0);
+    }
+    div {
+      cursor: pointer;
+    }
+
+
+
+  }
+  font-family: "iconfont";
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  .username>label:before {
+    content: "\e657";
+    font-size: 1.5em;
+    vertical-align: middle;
+    color: #55ff6c;
+  }
+  .password>label:before {
+    content: "\e669";
+    font-size: 1.5em;
+    vertical-align: middle;
+    color: red;
+  }
+  .email>label:before {
+    content: "\e647";
+    font-size: 1.5em;
+    vertical-align: middle;
+    color: #68f7ff;
+  }
+  .forgotPassword label:before {
+    content: "\e647";
+    font-size: 1.5em;
+    vertical-align: middle;
+    color: #68f7ff;
+  }
+
+}
+
+.UserDialog > h1 {
+  padding: 0;
+  margin-top: 0.3em;
+  margin-bottom: 0;
+}
+
+@font-face {
+  font-family: 'iconfont';  /* project id 440476 */
+  src: url('//at.alicdn.com/t/font_440476_mb7nilxyob7w4s4i.eot');
+  src: url('//at.alicdn.com/t/font_440476_mb7nilxyob7w4s4i.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_440476_mb7nilxyob7w4s4i.woff') format('woff'),
+  url('//at.alicdn.com/t/font_440476_mb7nilxyob7w4s4i.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_440476_mb7nilxyob7w4s4i.svg#iconfont') format('svg');
+}
+
+
+
+.UserDialog .signInOrSignUp > .panes {
+  padding: 0.5em 1em;
+  border-top: solid 1px rgb(232, 234, 238);
+}
+
+.UserDialog .forgotPassword > h3 {
+  padding: 1em;
+}
+
+.UserDialog .forgotPassword > form {
+  padding: 0 1em 1em;
+}
+
+.UserDialog form > .row {
+  display: flex;
+  justify-content: center;
+  padding: .3em 0;
+  margin-left: -1em;
+  .status {
+    font-family: "iconfont";
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+  }
+  .wrong:after {
+    position: absolute;
+    top: -0.5em;
+    content: "\e600";
+    font-size: 20px;
+    vertical-align: middle;
+    padding: 10px;
+    color: red;
+  }
+}
+
+.UserDialog form > .row > label:first-child {
+  width: 2em;
+}
+
+.UserDialog form > .row.actions {
+  padding-left: 7em;
+  display: flex;
+  align-items: center;
+  a {
+    font-size: small;
+    text-decoration: none;
+    margin: 0.8em 0 0 1em;
+    &:hover {
+      color: red;
+    }
+  }
+}
+
+.forgotPassword form > .row.actions {
+  padding-left: 5em;
+}
+
+.UserDialog form > .row.actions button {
+  margin-right: 0.7em;
+  padding: 0.3em 2em;
+}
+
+.UserDialog button {
+  font: inherit;
+  padding: .3em 0.5em;
+  border-width: 0;
+  border-radius: 3px;
+  &:hover {
+    background-color: rgb(80, 128, 216);
+    color: rgb(255, 255, 255);
+  }
+}
+.UserDialog .signUp>.actions.row {
+  padding-left: 1em;
+}
