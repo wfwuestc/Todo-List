@@ -13,7 +13,9 @@ class Weather extends React.Component {
 
   getCity() {
     var xhr1 = new XMLHttpRequest()
-    var log = console.log.bind(console)
+    var log = function () {
+      return
+    }
     xhr1.open('GET', "//weixin.jirengu.com/weather?key=study_javascript_in_jirengu.com", false)
 
     var _this = this

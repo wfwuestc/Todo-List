@@ -10,7 +10,9 @@ import {getCurrentUser, signOut, TodoModel} from './leanCloud'
 import Clock from './Clock'
 import Weather from './Weather'
 
-var log = console.log.bind(console)
+var log = function () {
+  return
+}
 
 class App extends Component {
   constructor(props) {
