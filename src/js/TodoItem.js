@@ -12,7 +12,7 @@ export default class TodoItem extends Component {
             />
             <label className="title">{this.props.todo.title}</label>
           </div>
-          <div className='delete' onClick={this.delete.bind(this)}></div>
+          <div className='delete' onClick={this.delete.bind(this)}/>
         </li>
     )
   }

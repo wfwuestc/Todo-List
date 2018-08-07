@@ -9,8 +9,7 @@ AV.init({
   appId: APP_ID,
   appKey: APP_KEY,
 })
-// var dataObject = AV.Object.extend('data')
-// var data = new dataObject()
+
 export default AV
 export const TodoModel = {
   getByUser(user, successFn, errorFn) {
